@@ -15,4 +15,10 @@ class Drone extends Model
         'battery_capacity',
         'state'
     ];
+
+    public function loaded_weight(){
+        // summing up all weights assigned to this drone instance.
+        return Medication::where('drones_id', $this->id)->sum('weight');
+    }
+
 }

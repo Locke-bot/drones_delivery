@@ -53,7 +53,7 @@ class DroneController extends Controller
         // update a record
         $drone = Drone::find($id);
         $drone -> update($request->all());
-        return $drone;
+        return $request;
     }
 
     /**
