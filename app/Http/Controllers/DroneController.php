@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Drone;
 class DroneController extends Controller
 {
+    public $model_choices = "Lightweight,Middleweight,Cruiserweight,Heavyweight";
+    public $state_choices =  "IDLE,LOADING,DELIVERED,RETURNING";
     /**
      * Display a listing of the resource.
      *
@@ -26,6 +28,12 @@ class DroneController extends Controller
     public function store(Request $request)
     {
         //register a new drone
+        $this->validate($request, [
+            'weight_limit' => 'integer|max:500',
+            'model' => 'in:'.$this->model_choices,
+            'state' => 'in:'.$this->state_choices,
+            'battery_capacity' => 'integer|between:0,100',
+        ]);
         return Drone::create($request->all());
     }
 
@@ -51,6 +59,13 @@ class DroneController extends Controller
     public function update(Request $request, $id)
     {
         // update a record
+        // validating if the weight_limit is under or equal to 500
+        $this->validate($request, [
+            'weight_limit' => 'integer|max:500',
+            'model' => 'in:'.$this->model_choices,
+            'state' => 'in:'.$this->state_choices,
+            'battery_capacity' => 'integer|between:0,100',
+        ]);
         $drone = Drone::find($id);
         $drone -> update($request->all());
         return $request;
