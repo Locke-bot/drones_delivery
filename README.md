@@ -13,7 +13,7 @@ From your comand line, run the following;<br><br>
     <li>run php artisan key:generate</li>
     <li>a sqlite database is in use, comment out the default mysql DB connection in the'.env' file</li>
     <li>set DB_CONNECTION = sqlite</li>
-    <li>set DB_HOST=127.0.0.1; ;DB_PORT=3306; DB_DATABASE=/path/to/drones_delivery/database/database.sqlite</li>
+    <li>set DB_HOST=127.0.0.1; DB_PORT=3306; DB_DATABASE=/path/to/drones_delivery/database/database.sqlite</li>
 </ul>
 
 <h2>Run Instructions:</h2>
