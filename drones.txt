@@ -1,0 +1,15 @@
+Good day sir,
+
+The assignment details includes:
+1) registering a drone: This can be done by posting a JSON containing the required information from '/drone'
+2) loading a drone with medication items: Each medication item is attached to a drone, the drone the item is attached to can be modified by
+   sending a PUT request from 'medication/{id}', this is done with the weight limit constraint, the drone won't be loaded if the weight_limit
+   is exceeded.
+3) checking loaded medication items for a given drone: This can be done by calling the loaded_weight() method on a drone instance.
+4) checking available drones for loading: Eligible drones are those with at least 25% of battery capacity and with a state of LOADING, the number of eligible
+   drones at any given time is given by a GET request to '/get_available_drones'
+5) check drone battery level for a drone: This and all other information about a drone is available upon a GET request to '/drone_details/{id}',
+   a request can also be sent to '/drone_battery/{id}' for just battery information.
+
+Sir, all my api tests were done with the Insomnia application, thank you for patience.
+Thank you!
