@@ -1,7 +1,7 @@
 This is the laravel solution to the drone delivery coding assignment, To run the project composer is needed, the project was built on PHP 7.3.2 and Laravel 4.2.9 .
 You can see all the API endpoints documentation on Postman here https://documenter.getpostman.com/view/19201032/UVXkovWF
 
-<h2>Build Instructions</h2>:
+<h2>Build Instructions:</h2>
 From your comand line, run the following;
 1) git clone https://github.com/Locke-bot/drones_delivery.git
 2) cd drones_delivery
@@ -14,7 +14,7 @@ From your comand line, run the following;
 9) set DB_CONNECTION = sqlite
 10) set DB_HOST=127.0.0.1; ;DB_PORT=3306; DB_DATABASE=/path/to/drones_delivery/database/database.sqlite
 
-<span style="font-size:larger;">Run Instructions</span>:
+<h2>Run Instructions:</h2>
 1) cd to the drones_delivery folder
 2) run php artisan serve
 
