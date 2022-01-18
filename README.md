@@ -22,4 +22,4 @@ From your comand line, run the following;<br><br>
     <li>run php artisan serve</li>
  </ul>
 
-The project will be served on http://localhost:8000/api/{routes}.
+The project will be served on http://localhost:8000/api/{routes}, where {routes} is a placeholder :)
