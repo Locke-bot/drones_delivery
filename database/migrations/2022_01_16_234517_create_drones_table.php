@@ -29,14 +29,14 @@ class CreateDronesTable extends Migration
             $table->float('weight')->default(0);
             $table->string('code', 255); // no ImageField yet
             $table->integer('drones_id')->unsigned();
-            $table->foreign('drones_id')->nullable()->references('id')->on('drones');
+            $table->foreign('drones_id')->nullable()->references('id')->on('drones')->onDelete('set null');
             $table->timestamps();
         });
         
         Schema::create('battery_level_logs', function (Blueprint $table) {
             $table->id();
             $table->integer('drones_id')->unsigned();
-            $table->foreign('drones_id')->nullable()->references('id')->on('drones');
+            $table->foreign('drones_id')->nullable()->references('id')->on('drones')->onDelete('set null');
             $table->string('serial_number', 255)->nullable();
             $table->string('state', 255)->nullable();
             $table->integer('battery_level')->default(0);
@@ -51,7 +51,7 @@ class CreateDronesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('medication');
+        Schema::dropIfExists('medications');
         Schema::dropIfExists('battery_level_logs');
         Schema::dropIfExists('drones');
     }
